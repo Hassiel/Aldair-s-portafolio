@@ -1,0 +1,340 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html, body {
+  font-family: Open Sans;
+  font-size: 18px;
+  line-height: 28px;
+  scroll-behavior: smooth;
+  
+}
+
+h1 {
+  letter-spacing: -15px;
+  font-family: Open Sans;
+  color: white;
+  text-align: center;
+  font-size: 150px;
+  font-weight: 800;
+  line-height: 200px;
+}
+
+.MainContainer {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+h3:hover{color:grey;cursor:pointer;}
+
+
+
+.row::after{content:""; clear:both; display:block;}
+.Img, .Info{text-align:center; min-height:400px;}
+.Img img{height:393px; width:auto;}
+.Img1 img {height:300px; width:auto;}
+.Info{color:white;}
+.Info h3{font-size:60px; padding:160px 0px; text-transform:uppercase;}
+
+#Robot{background-color:black;}
+#Curso{background-color:black;
+background-image:url("../img/sss.png");height:401px;
+background-repeat: no-repeat;}
+#Houdini{background-color:black;
+background-image:url("../img/houdi.png");
+background-repeat: no-repeat; }
+#Cinema{background-color:black;
+background-image:url("../img/cci.png");
+background-repeat: no-repeat;}
+#Photoshop{background-color:black;
+background-image:url("../img/shopp.png");height:401px;
+background-repeat: no-repeat;}
+#Edu{background-color:black;}
+
+.ibero:hover{background-color:black;transition: all .5s ease;}
+
+.edu{
+	background-color:black;
+	height:90px;
+	color:white;
+	font-size:60px;
+}
+.edu h2{text-align:center;margin:30px;}
+
+.nombre{
+	text-align:right;
+	font-family:sans-serif;
+	padding:0px 10px;
+	background-color:#DCC071;
+	opacity:1;
+	text-decoration:none;
+}
+#Robot .Info p{text-align:center;}
+#Robot .Info h3{padding:80px 0px;}
+#Robot .Info h2{padding:30px 0px;}
+
+
+.ParallaxContainer {
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  z-index: -1;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transform: translateZ(-1px) scale(2);
+  background-image:url("../img/menu.png");
+  background-color: #000000;
+}
+.logo{
+	position:absolute;
+	width:407px;
+	height:223px;
+	top:10px;
+}
+.img{
+	width:100%;
+	height:100%;
+}
+
+a:-webkit-any-link {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+.der{float:right}
+.contacto nav ul li{color:white; display:inline-block; margin:30px 40px; 
+	font-family:Arial, Sans-Serif;font-size:10px;}	
+	.contacto{background-color:black;height:90px;}
+
+
+/*Retícula responsive en columnas */
+[class*="col-"]{float:left;}
+
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width:91.66%;}
+.col-12{width:100%;}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+
+
+@media only screen and (max-width:1024px){
+   .col-3{width:25%;}
+   .Info h3{font-size:30px;}
+   p{font-size:15px;}
+}
+
+@media only screen and (max-width:768px){
+  [class*="col-"]{width:100%;}
+   .col-3{width:100%;}
+  .menu{display:none;}
+  header{text-align:center;}
+  .ParallaxContainer h1{display:none;}
+  .logo{top:200px;
+ 	height:350px; width:auto;}
+	.Img img{margin-left:70px; height:300px; width:auto;}
+	.Info h3{font-size:30px;}
+	p{display:none;}
+	.Img{display:none;}
+	.Img1 img{margin-left:150px; height:200px;}
+	
+
+	#Curso{background-repeat: no-repeat;}
+	#Houdini{background-repeat: no-repeat;}
+	#Cinema{background-repeat: no-repeat;}
+	#Photoshop{background-repeat: no-repeat;background-color:#433ACF;}
+	
+	
+}
+
+/*Menu*/
+
+
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+  background: #000000;
+  color: black;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+#Menu a
+{
+  text-decoration: none;
+  color: black;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: #175fad;
+}
+
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 100;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #e0e0e0	;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #175fad;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #0a0a0a;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.header{position:block;}
+
+
+#send {color:white;}
+label {color:white;}
+
+
+
+.row-input{
+  width: 35%;
+  padding-top: 20px;
+  line-height: 2em;
+}
+
+.row-input input, textarea{
+  float: right;
+  width: 50%;
+  font-size: 15px;
+    color: black;
+}
+
+
+.boton {margin-left:300px;}
+.boton h3{color:black; font-size:20px;}

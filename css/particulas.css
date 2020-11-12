@@ -1,0 +1,90 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.text {
+  position: absolute;
+  width: 450px;
+  left: 55%;
+  margin-left: -225px;
+  height: 40px;
+  top: 70%;
+  margin-top: -20px;
+}
+
+p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 250px;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: white;
+}
+
+.belize {
+  color: white;
+}
+
+.pomegranate {
+  color: white;
+}
+
+.green {
+  color: white;
+}
+
+.midnight {
+  color: white;
+}
+
+/*width:656px;height:700px;*/
+ /*Retícula responsive en columnas */
+ [class*="col-"]{float:left;}
+ 
+ .col-1{width:8.33%;}
+ .col-2{width:16.66%;}
+ .col-3{width:25%;}
+ .col-4{width:33.33%;}
+ .col-5{width:41.66%;}
+ .col-6{width:50%;}
+ .col-7{width:58.33%;}
+ .col-8{width:66.66%;}
+ .col-9{width:75%;}
+ .col-10{width:83.33%;}
+ .col-11{width:91.66%;}
+ .col-12{width:100%;}
+ .row::after{content:""; clear:both; display:block;}
+
